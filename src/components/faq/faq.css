@@ -1,0 +1,40 @@
+#faq {
+  padding: 0 var(--edges);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.accordion-item {
+  &[open] {
+    & .accordion-marker {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.accordion-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--c-black);
+  list-style-type: none;
+  font-size: clamp(1.2rem, 5vw, 2rem);
+  font-weight: bold;
+  padding: 1em;
+  box-shadow: var(--bs);
+  cursor: pointer;
+}
+
+.accordion-marker {
+  max-height: 30px;
+  max-width: 30px;
+  fill: var(--c-black);
+  transition: all 200ms;
+}
+
+.accordion-body {
+  background: var(--c-medium);
+  margin-top: 20px;
+  padding: 20px;
+}

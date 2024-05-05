@@ -1,0 +1,85 @@
+#hero {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0 var(--edges);
+  border-bottom: 4px solid var(--c-black);
+  margin-top: 50px;
+
+  @media screen and (width <= 768px) {
+    margin-top: 20px;
+  }
+}
+
+.hero-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  min-width: 380px;
+
+  @media screen and (width <= 768px) {
+    align-items: center;
+    gap: 20px;
+    min-width: 100%;
+  }
+}
+
+.hero-title {
+  font-size: clamp(2rem, 5.5vw, 4rem);
+  text-transform: uppercase;
+
+  & strong {
+    color: var(--c-main);
+  }
+
+  @media screen and (width <= 768px) {
+    text-align: center;
+  }
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  @media screen and (width <= 768px) {
+    justify-content: center;
+  }
+}
+
+.hero-students {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  & img {
+    border-radius: 50%;
+  }
+
+  & img:nth-child(2) {
+    transform: translateX(-25%);
+  }
+  & img:nth-child(3) {
+    transform: translateX(-50%);
+  }
+
+  & strong {
+    font-weight: normal;
+  }
+
+  @media screen and (width <= 768px) {
+    justify-content: center;
+  }
+}
+
+.students-list {
+  transform: translateX(15px);
+}
+
+.hero-img {
+  max-height: clamp(250px, 50vw, 456px);
+  width: auto;
+  height: auto;
+}

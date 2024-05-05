@@ -1,0 +1,29 @@
+---
+import { Image } from 'astro:assets';
+
+import studentImg from './img/student1.jpg';
+import studentImg2 from './img/student2.jpg';
+import studentImg3 from './img/student3.jpg';
+---
+
+<section id="hero">
+  <div class="hero-container">
+    <h1 class="hero-title">
+      <strong>SKillUP!</strong>
+      Platform for
+          skill and Learning</h1>
+    <div class="hero-buttons">
+      <button type="button" name="getOrder" class="button blue">Start Learning!</button>
+      <button type="button" name="getOrder" class="button white">Explore Courses</button>
+    </div>
+    <div class="hero-students">
+      <div class="students-list">
+        <Image src={studentImg} densities={[1.5, 2]} alt="student avatar" />
+        <Image src={studentImg2} densities={[1.5, 2]} alt="student avatar" />
+        <Image src={studentImg3} densities={[1.5, 2]} alt="student avatar" />
+      </div>
+      <strong>+100K Students like skillup</strong>
+    </div>
+  </div>
+    <img src="./img/hero-img.svg" alt="man with laptop" class="hero-img">
+</section>

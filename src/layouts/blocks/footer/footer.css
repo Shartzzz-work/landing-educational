@@ -1,0 +1,35 @@
+#footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 30px 50px 50px;
+  background: var(--c-medium);
+  border-top: 2px solid var(--c-black);
+
+  @media screen and (width <= 768px) {
+    justify-content: center;
+  }
+}
+
+.footer-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  
+  & span {
+    border-right: 1px solid var(--c-black);
+    line-height: 1;
+    padding-right: 10px;
+  }
+}
+
+.footer-social__list {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}

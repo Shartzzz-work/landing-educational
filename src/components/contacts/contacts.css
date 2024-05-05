@@ -1,0 +1,45 @@
+#contacts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: var(--edges) var(--edges-100);
+  background: var(--c-medium);
+  margin-top: 100px;
+}
+
+.contacts-text {
+  flex: 2;
+  display: grid;
+  gap: clamp(20px, 4vw, 40px);
+  min-width: 500px;
+
+  & h2 {
+    font-size: 3rem;
+
+    @media screen and (width <= 768px) {
+      text-align: center;
+    }
+  }
+
+  @media screen and (width <= 768px) {
+    min-width: 100%;    
+  }
+}
+
+.contacts-data {
+  display: grid;
+  gap: 20px;
+
+  & .link {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 1.1em;
+  }
+}
+
+[name="support"] {
+  background: var(--c-accent);
+}
